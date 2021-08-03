@@ -7,6 +7,9 @@ project "enet"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
 	files { "*.c", "*.h" }
+
+	links { "ws2_32.lib",
+		"winmm.lib" }
 	
 	includedirs { "include/" }
 	
